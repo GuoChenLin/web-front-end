@@ -1,5 +1,5 @@
 1.js的基本数据类型有哪些
-```
+```javascript
 Undefined、Null、Boolean、Number、String
 Object属于复杂数据类型
 javascript中typeef的结果有六个，分别是boolean,number,string,object,function,undefined
@@ -7,14 +7,14 @@ javascript中typeef的结果有六个，分别是boolean,number,string,object,fu
 ```
 
 1.js中有哪些内置对象
-```
+```javascript
 Object是js所有对象的父对象
 数据封装类对象：Object、Array、Boolean、Number 和 String
 其他对象：Function、Arguments、Math、Date、RegExp、Error
 ``` 
 
 1.根据存储位置的不同，js数据类型可以分为？
-```
+```javascript
 原始数据类型（ Undefined,Null,Boolean,Number,String ）
 引用数据类型 ( 对象，包好数组，函数等)
 
@@ -27,7 +27,7 @@ Object是js所有对象的父对象
 ```
 
 1.说几条写js的基本规范？
-```
+```javascript
 1.不要在同一行声明多个变量。
 2.请使用 ===/!==来比较true/false或者数值
 3.使用对象字面量替代new Array这种形式
@@ -40,6 +40,7 @@ Object是js所有对象的父对象
 ```
 
 1.js原型原型，原型链，特点
+```javascript
 每个对象创建时会初始化一个属性，prototype，
 访问对象时，如果对象内部不存在这个属性，则会去prototype中寻找；
 这个prototype又会有自己的prototype，这样一直找下去，直到Object内置对象，形成了原型链。
@@ -60,9 +61,10 @@ Object.prototype.isPrototypeOf(new Array()) => true，原型链上的原型均�
 Array.prototype.constructor === Array
 (new Array()).__proto__.constructor === Array
 Array.prototype === new Array().__proto__
+```
 
 1.js如何实现继承
-```
+```javascript
 1.构造函数的继承
 （1）构造函数绑定
 function Cat(name,color){
