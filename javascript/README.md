@@ -25,7 +25,6 @@ Undefined、Null、Boolean、Number、String
 > 常常将引用值指针设置为null回收内存
 
 ### 说几条写js的基本规范？
-```javascript
 > 1.不要在同一行声明多个变量。
 > 2.请使用 ===/!==来比较true/false或者数值
 > 3.使用对象字面量替代new Array这种形式
@@ -35,10 +34,8 @@ Undefined、Null、Boolean、Number、String
 > 7.for循环必须使用大括号
 > 8.if语句必须使用大括号
 > 9.for-in循环中的变量 应该使用var关键字明确限定作用域，从而避免作用域污染。
-```
 
 ### js原型原型，原型链，特点
-```javascript
 > 每个对象创建时会初始化一个属性，prototype，
 > 访问对象时，如果对象内部不存在这个属性，则会去prototype中寻找；
 > 这个prototype又会有自己的prototype，这样一直找下去，直到Object内置对象，形成了原型链。
@@ -46,6 +43,7 @@ Undefined、Null、Boolean、Number、String
 
 > 特点：原型对象是一个引用值，创建的每一个对象并没有属于自己的原型副本，因此改变原型时，
 > 与之相关的对象也会继承该改变
+
 ```javascript
 /* 相关判断 */
 //（1）instanceof 检查一个对象是否是一个构造函数的实例
