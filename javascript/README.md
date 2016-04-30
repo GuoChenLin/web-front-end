@@ -149,6 +149,7 @@ Object是js所有对象的父对象
     //（5）拷贝继承, 拷贝被继承对象原型到新对象原型中
     ```
 2. 非构造函数的继承
+
     ```javascript
     //（1）object方法（改变原型指向）
     function object(o) {
