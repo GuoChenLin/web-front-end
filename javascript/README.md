@@ -7,11 +7,46 @@ Undefined、Null、Boolean、Number、String
 * 其中typeof null === ‘object’ 
 
 ### 什么是词法作用域，js中如何改变词法作用域
+1. 简单地说,词法作用域就是定义在词法阶段的作用域，换句话说,词法作用域是由你在写代码时将变量和块作用域写在哪里决定的,因此当词法分析器处理代码时,会保持作用域不变
+2. js中改变词法作用域通常有2种方法,eval与with，eval传入字符串，将字符串当做js代码直接执行，with针对传入的对象创建一个块级作用域（但是var声明并不会限制在这个块内，而是添加到with所处的函数作用域中）
+
+```javascript
+/* eval */
+var b = 2;
+function foo(str, a){
+    eval(str);
+    console.log(a, b)
+}
+foo("var b = 3;", 1); // => 1, 3，作为参数传入的str,可以在执行时改变作用域
+
+/* with */
+var a = { b: 3, c: 4};
+var b = 100;
+with(a){
+    b = 10; c = 20; d = 30;
+}
+console.log(a.b, a.c, a.d, b) // => 10 20 undefined 100,
+// with改变了词法作用域，with语句中，先会查找变量是否是a的属性,不是再向上查找
+// 如果属性不存在,并不会给a新增一个属性
+// 因此b=10,等价于 a.b = 10, 外部的b不受影响
+// d = 30,等价于window.d = 30 ,隐式地声明了一个全局变量
+// with语句代码可读性很差,而且容易引起错误,严格模式下已被禁用
+```
+
 
 ### with和eval为什么会导致性能下降
+1. with作用域查找时,先查找with传入的对象是否具有该属性,不存在则向上查找,增加了查找的次数
+2. eval语句运行时,需要先解析为js代码,再编译运行,增加了编译前的时间 
+3. with和eval都会在运行时修改或创建新的作用域,依次来欺骗其他在书写时确定的词法作用域。通常,js引擎会在编译阶段进行数项的编译优化,有些优化依赖于能够根据代码的词法进行静态分析,并预先确定所有变量和函数的定义位置,才能在执行过程中快速找到标识符。
+如果引擎在代码中发现了eval或with,它只能简单地假设关于标识符位置的判断都是无效的,因此无法在词法分析阶段明确地知道eval会接收到什么样的代码,这些代码会对作用域如何进行修改,也无法预先知道传递给with用来创建新词法作用域的对象到底是什么。
+最悲观的情况是,代码中出现了eval和with,所有的优化都是没有意义的,最简单的做法是完全不做优化,因此with和eval会导致性能下降。
+
+> 参考: 《你不知道的JavaScript(上卷)》 第二章(词法作用域)
+
+
 
 ### js中有哪些内置对象
-* Object是js所有对象的父对象
+Object是js所有对象的父对象
 * 数据封装类对象：Object、Array、Boolean、Number 和 String
 * 其他对象：Function、Arguments、Math、Date、RegExp、Error
 
@@ -39,17 +74,17 @@ Undefined、Null、Boolean、Number、String
 9.for-in循环中的变量 应该使用var关键字明确限定作用域，从而避免作用域污染。
 
 ### js原型，原型链，特点
-1.原型
+1. 原型
 每个函数都有一个prototype属性，如果这个函数被当做一个构造函数（或称为构造器）使用，其创建的对象有一个隐式引用（__proto__，称为对象的原型）指向构造函数的prototype，通过这个构造函数无论创建多少对象，这些对象的__proto__都指向构造函数的prototype属性。
 
-2.原型链
+2. 原型链
 原型也是一个对象，因此原型也有一个非空引用指向自己的原型（所有对象最终的原型指向Object内置对象），由此形成原型链
 ```javascript
 arr = new Array() // 数组继承自Object
 Array.prototype === arr.__proto__ // true
 Object.prototype === arr.__proto__.__proto__  === Array.prototype.__proto__// true，
 ```
-3.特点
+3. 特点
 * 对象的原型是一个引用值，创建的每一个对象并没有属于自己的原型副本，因此改变原型时，与之相关的对象也会继承该改变
 * 对象属性查找时，先查找自己是否具有该属性，不存在则查找原型的属性，不存在则查找原型的原型的属性，直至内置对象Object
 ```
@@ -79,7 +114,7 @@ arr.__proto__.constructor === Array
 ```
 
 ### js如何实现继承
-1.构造函数的继承
+1. 构造函数的继承
 ```javascript
 //（1）构造函数绑定
 function Cat(name,color){
@@ -103,7 +138,7 @@ Cat.prototype.constructor = Cat;
 //（5）拷贝继承
 ```
 
-2.非构造函数的继承
+2. 非构造函数的继承
 ```javascript
 //（1）object方法（改变原型指向）
 function object(o) {
@@ -114,8 +149,9 @@ function object(o) {
 //（2）浅拷贝，缺点是拷贝的值若为引用对象，改变会有副作用
 //（3）深拷贝，现在jQuery库使用的继承方法
 ```
-参考：[阮一峰-构造函数继承](http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_inheritance.html)
 
+> 参考1：[阮一峰-构造函数的继承](http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_inheritance.html)
+> 参考2: [阮一峰-非构造函数的继承](http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_inheritance_continued.html)
 
 ### instanceof运算符作用，请给出其等价实现
 ```javascript
@@ -131,14 +167,15 @@ function instance_of(V, F) {
   }
 }
 ```
-参考 [stackoverflow的回答](http://stackoverflow.com/questions/2449254/what-is-the-instanceof-operator-in-javascript)
+> 参考 [stackoverflow的回答](http://stackoverflow.com/questions/2449254/what-is-the-instanceof-operator-in-javascript)
 
 ### js大（小）于连续判断
+和python，coffeescript不同，js无真正意义上的连续判断，如下所示
+
 ```javascript
 var a = 5
 var b = 2
 if( 4 < a < b) {
-    // 和python，coffeescript不同，js无真正意义上的连续判断
     // 等价于(4 < 5) < 2 => true(1) < 2 => true
     console.log(a) // 5
 } else {
