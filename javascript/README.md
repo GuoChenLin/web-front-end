@@ -1,11 +1,81 @@
 ### js的基本数据类型有哪些
 ```javascript
-Undefined、Null、Boolean、Number、String
+Undefined、Null、Boolean、Number、String // Object属于复杂数据类型
 ```
 
-* Object属于复杂数据类型
 * javascript中typeof的结果有六个，分别是boolean,number,string,object,function,undefined
 * 其中typeof null === ‘object’ 
+
+### js中null是原始(primitive)数据类型之一,为什么`typeof null === ‘object’`
+通常认为这是一个错误，null表示值为空，常用来释放内存。<br/>
+原理是这样的，不同的对象在底层都表示为二进制，js中二进制前三位为0都会被判定为object，null的二进制表示全是0，自然前三位也是0，因此typeof的结果为`object`
+
+> 参考：《你不知道的JavaScript(上卷)》p103，注释部分
+
+### 介绍一下js对象的属性描述符
+```javascript
+Object.getOwnPropertyDescriptor(myObject, "a")
+// 返回值如下
+{
+    value: 2,  // 属性值，
+    writable: true,  // 是否可修改
+    enumerable: true,  // 是否可遍历，可遍历属性将出现在for..in.. 中
+    configurable: true // 是否可以通过defineProperty方法修改属性描述符 
+}
+// configurable: false有一个例外，writable属性可由true改为false，但是不能fasle改true 
+```
+
+### 如何评价js中万物皆是对象这句话
+对象仅是js6种语言类型（string，number，boolean，null，undefined，object）之一<br/>
+考虑下面的例子
+
+```javascript
+var strPrimitive = "I am a string"
+var strObject = new String("I am a string")
+strPrimitive instanceof String // => false
+strObject instanceof String // => true
+console.log(strPrimitive.length) //=> 13
+console.log(strObject.length) // => 13
+```
+
+length是String对象的属性，必要时语言会自动将字符串字面量转换为String对象，Number等内置对象也是如此，因此会有js中万物皆是对象的错觉
+
+> 参考：《你不知道的JavaScript(上卷)》第三章——对象
+
+### ES5中如何创建不可变对象
+1. 不变性
+
+    ```javascript
+    var myObject = {};
+    Object.defineProperty(myObject,"a", {
+        value: 12,
+        writable: false, // 不可修改
+        configurable: false  // 不可重定义或者删除
+    })
+    delete myObject.a   // 删除或赋值无效，严格模式报错
+    console.log(myObject.a) // => 12
+    ```
+2. 禁止扩展
+    
+    ```javascript
+    var myObject = { a: 2 };
+    Object.preventExtensions(myObject);
+    myObject.b = 3;
+    console.log(myObject.b); // => undefined
+    ```
+
+3. 密封 seal
+    
+    Object.seal(..)。密封的作用是给对象调用Object.preventExtensions(..)，使之不能扩展，另外所有现有属性标记为configurable:false。<br/>
+    所以密封之后，不能添加新属性，也不能重新配置或者删除属性（但是可能可以修改，不改变writable的值）
+
+4. 冻结 freeze
+    
+    Object.freeze(..)。调用Object.seal(..)，并把数据访问属性标记为writable:false，使属性不可修改。<br/>
+    但是freeze方法只能避免自身属性的直接修改，不能限制引用类型的修改（如需深度冻结，可用递归，或者遍历等方法实现）
+
+### ES6中的for..of.. 与ES5中的for..in..有什么区别
+for..of.. 是遍历值，for..in..是遍历键
 
 ### 什么是词法作用域，js中如何改变词法作用域
 1. 简单地说,词法作用域就是定义在词法阶段的作用域，换句话说,词法作用域是由你在写代码时将变量和块作用域写在哪里决定的,因此当词法分析器处理代码时,会保持作用域不变
