@@ -10,4 +10,5 @@
 ## 地址
 
 - Github地址: [https://github.com/gzdaijie/web-front-end](https://github.com/gzdaijie/web-front-end)
+- Gitbook地址: [http://gzdaijie.github.io/web-front-end/](http://gzdaijie.github.io/web-front-end/)
 - 极客兔兔的小站: [https://geektutu.com](https://geektutu.com)
