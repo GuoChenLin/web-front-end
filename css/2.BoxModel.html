@@ -1,0 +1,628 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>盒子模型 · 前端面试大全</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="3.Resources-load.html" />
+    
+    
+    <link rel="prev" href="1.Pseudo-classes.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"gzdaijie","repo":"web-front-end","type":"star","size":"large"},{"user":"gzdaijie","type":"follow","width":"230","count":false}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    HTML
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../html/1.SEO.md">
+            
+                <span>
+            
+                    
+                    SEO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../html/2.Standard.html">
+            
+                <a href="../html/2.Standard.html">
+            
+                    
+                    标准
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../html/3.HtmlTags.html">
+            
+                <a href="../html/3.HtmlTags.html">
+            
+                    
+                    标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    CSS
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="1.Pseudo-classes.html">
+            
+                <a href="1.Pseudo-classes.html">
+            
+                    
+                    伪类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.2" data-path="2.BoxModel.html">
+            
+                <a href="2.BoxModel.html">
+            
+                    
+                    盒子模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="3.Resources-load.html">
+            
+                <a href="3.Resources-load.html">
+            
+                    
+                    资源加载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="4.W3C-concepts.html">
+            
+                <a href="4.W3C-concepts.html">
+            
+                    
+                    常见概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    JavaScript
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../javascript/1.Language-foundation.html">
+            
+                <a href="../javascript/1.Language-foundation.html">
+            
+                    
+                    语言基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../javascript/2.Window.html">
+            
+                <a href="../javascript/2.Window.html">
+            
+                    
+                    window对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../javascript/3.Nodejs.html">
+            
+                <a href="../javascript/3.Nodejs.html">
+            
+                    
+                    Node.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../javascript/4.ES6.html">
+            
+                <a href="../javascript/4.ES6.html">
+            
+                    
+                    ECMAScript6
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../javascript/5.Animation.html">
+            
+                <a href="../javascript/5.Animation.html">
+            
+                    
+                    Animation动画相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    其他
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../other/1.Performance.html">
+            
+                <a href="../other/1.Performance.html">
+            
+                    
+                    性能优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../other/2.Transfer.html">
+            
+                <a href="../other/2.Transfer.html">
+            
+                    
+                    传输协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../other/3.Program-Manage.md">
+            
+                <span>
+            
+                    
+                    项目管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../other/4.Browser.html">
+            
+                <a href="../other/4.Browser.html">
+            
+                    
+                    浏览器相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >盒子模型</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x524D;&#x7AEF;&#x9762;&#x8BD5;&#x9898;-css&#x4E4B;&#x76D2;&#x5B50;&#x6A21;&#x578B;"><a name="&#x524D;&#x7AEF;&#x9762;&#x8BD5;&#x9898;-css&#x4E4B;&#x76D2;&#x5B50;&#x6A21;&#x578B;" class="plugin-anchor" href="#&#x524D;&#x7AEF;&#x9762;&#x8BD5;&#x9898;-css&#x4E4B;&#x76D2;&#x5B50;&#x6A21;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x524D;&#x7AEF;&#x9762;&#x8BD5;&#x9898; CSS&#x4E4B;&#x76D2;&#x5B50;&#x6A21;&#x578B;</h1>
+<h3 id="&#x5757;&#x72B6;&#x5143;&#x7D20;margin-bottom&#x5BF9;&#x4E0B;&#x9762;&#x5143;&#x7D20;&#x7684;&#x5F71;&#x54CD;"><a name="&#x5757;&#x72B6;&#x5143;&#x7D20;margin-bottom&#x5BF9;&#x4E0B;&#x9762;&#x5143;&#x7D20;&#x7684;&#x5F71;&#x54CD;" class="plugin-anchor" href="#&#x5757;&#x72B6;&#x5143;&#x7D20;margin-bottom&#x5BF9;&#x4E0B;&#x9762;&#x5143;&#x7D20;&#x7684;&#x5F71;&#x54CD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5757;&#x72B6;&#x5143;&#x7D20;margin-bottom&#x5BF9;&#x4E0B;&#x9762;&#x5143;&#x7D20;&#x7684;&#x5F71;&#x54CD;</h3>
+<pre class="language-"><code class="lang-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style language-css"> 
+    <span class="token selector">#example</span> <span class="token punctuation">{</span>
+        <span class="token property">margin-bottom</span><span class="token punctuation">:</span> -10px<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>World<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>example<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Hello<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>World<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>&#x95EE;&#x9898;&#xFF1A;&#x589E;&#x52A0;&#x4E86;#example&#x6837;&#x5F0F;&#x540E;&#xFF0C;h2&#x5143;&#x7D20;&#x4F4D;&#x7F6E;&#x4F1A;&#x53D1;&#x751F;&#x6539;&#x53D8;&#x5417;&#xFF1F; h2&#x5411;&#x4E0A;&#x79FB;&#x52A8;10px</p>
+<ul>
+<li>&#x5757;&#x72B6;&#x5143;&#x7D20;&#x6240;&#x5360;&#x7A7A;&#x95F4;&#x5305;&#x542B;&#x5916;&#x8FB9;&#x8DDD;(margin)&#xFF0C;margin&#x8BBE;&#x7F6E;&#x4E3A;&#x8D1F;&#x503C;&#xFF0C;&#x5C06;&#x51CF;&#x5C11;&#x6240;&#x5360;&#x7A7A;&#x95F4;</li>
+<li>&#x5143;&#x7D20;&#x6392;&#x5217;&#x65B9;&#x5411;&#x662F;&#x4E0A;-&gt;&#x4E0B;&#xFF0C;&#x5DE6;-&gt;&#x53F3;&#xFF0C;&#x5982;&#x679C;p&#x5143;&#x7D20;&#x8BBE;&#x7F6E;margin-top:-10px&#xFF0C;&#x81EA;&#x8EAB;&#x5C06;&#x4E0A;&#x79FB;10px</li>
+</ul>
+<h3 id="&#x7F51;&#x9875;&#x4E2D;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;&#x5947;&#x6570;&#x7684;&#x5B57;&#x4F53;&#xFF0C;&#x8FD8;&#x662F;&#x5076;&#x6570;&#x7684;&#x5B57;&#x4F53;"><a name="&#x7F51;&#x9875;&#x4E2D;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;&#x5947;&#x6570;&#x7684;&#x5B57;&#x4F53;&#xFF0C;&#x8FD8;&#x662F;&#x5076;&#x6570;&#x7684;&#x5B57;&#x4F53;" class="plugin-anchor" href="#&#x7F51;&#x9875;&#x4E2D;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;&#x5947;&#x6570;&#x7684;&#x5B57;&#x4F53;&#xFF0C;&#x8FD8;&#x662F;&#x5076;&#x6570;&#x7684;&#x5B57;&#x4F53;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7F51;&#x9875;&#x4E2D;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;&#x5947;&#x6570;&#x7684;&#x5B57;&#x4F53;&#xFF0C;&#x8FD8;&#x662F;&#x5076;&#x6570;&#x7684;&#x5B57;&#x4F53;</h3>
+<p>&#x5E38;&#x7528;12px/14px&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x4F1A;&#x5C06;&#x5947;&#x6570;&#x5B57;&#x4F53;&#x6E32;&#x67D3;&#x4E3A;&#x5076;&#x6570;&#x5B57;&#x4F53;&#xFF0C;&#x67D0;&#x4E9B;&#x5B57;&#x4F53;&#x5BF9;&#x5947;&#x6570;&#x5B57;&#x53F7;&#x652F;&#x6301;&#x4E0D;&#x597D;&#xFF0C;&#x52A0;&#x7C97;&#x7684;&#x65F6;&#x5019;&#x53EF;&#x80FD;&#x4E00;&#x5927;&#x4E00;&#x5C0F;</p>
+<h3 id="&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x51FA;&#x73B0;&#x6D6E;&#x52A8;&#xFF0C;&#x5982;&#x4F55;&#x6E05;&#x9664;&#x6D6E;&#x52A8;"><a name="&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x51FA;&#x73B0;&#x6D6E;&#x52A8;&#xFF0C;&#x5982;&#x4F55;&#x6E05;&#x9664;&#x6D6E;&#x52A8;" class="plugin-anchor" href="#&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x51FA;&#x73B0;&#x6D6E;&#x52A8;&#xFF0C;&#x5982;&#x4F55;&#x6E05;&#x9664;&#x6D6E;&#x52A8;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x51FA;&#x73B0;&#x6D6E;&#x52A8;&#xFF0C;&#x5982;&#x4F55;&#x6E05;&#x9664;&#x6D6E;&#x52A8;</h3>
+<p>&#x7236;&#x5143;&#x7D20;&#x6CA1;&#x6709;&#x8BBE;&#x7F6E;&#x9AD8;&#x5EA6;&#xFF0C;&#x5B50;&#x5143;&#x7D20;&#x8BBE;&#x7F6E;float&#xFF0C;&#x5BFC;&#x81F4;&#x7236;&#x5143;&#x7D20;&#x88AB;&#x6491;&#x5F00;&#xFF0C;&#x4E0D;&#x80FD;&#x5305;&#x542B;&#x5B50;&#x5143;&#x7D20;&#xFF0C;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#x5982;&#x4E0B;</p>
+<ol>
+<li>&#x5B50;&#x5143;&#x7D20;&#x5185;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;clear:both &#x7684;div&#xFF0C;</li>
+<li>&#x6216;&#x8005;&#x7236;&#x5143;&#x7D20;&#x8BBE;&#x7F6E;overflow&#xFF08;auto:&#x6EA2;&#x51FA;&#x81EA;&#x52A8;&#x663E;&#x793A;&#x6EDA;&#x52A8;&#x6761;&#xFF0C;overlay&#x6EA2;&#x51FA;&#x8986;&#x76D6;&#xFF0C;hidden&#x6EA2;&#x51FA;&#x9690;&#x85CF;&#xFF0C;visible &#x6EA2;&#x51FA;&#x663E;&#x793A;&#xFF0C;scroll&#x65E0;&#x8BBA;&#x662F;&#x5426;&#x6EA2;&#x51FA;&#x663E;&#x793A;&#x6EDA;&#x52A8;&#x6761;&#xFF09;</li>
+<li><p>&#x6216;&#x8005;&#x6DFB;&#x52A0;after&#x4F2A;&#x7C7B;</p>
+<pre class="language-"><code class="lang-css"> <span class="token selector">::after</span> <span class="token punctuation">{</span><span class="token property">clear</span><span class="token punctuation">:</span> both<span class="token punctuation">;</span> <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span> <span class="token property">visibility</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span> <span class="token property">height</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span> <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">&apos;.&apos;</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+</code></pre>
+</li>
+</ol>
+<h3 id="&#x5982;&#x4F55;&#x8BA9;chrome&#x652F;&#x6301;&#x5C0F;&#x4E8E;12px&#x5B57;&#x4F53;"><a name="&#x5982;&#x4F55;&#x8BA9;chrome&#x652F;&#x6301;&#x5C0F;&#x4E8E;12px&#x5B57;&#x4F53;" class="plugin-anchor" href="#&#x5982;&#x4F55;&#x8BA9;chrome&#x652F;&#x6301;&#x5C0F;&#x4E8E;12px&#x5B57;&#x4F53;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5982;&#x4F55;&#x8BA9;chrome&#x652F;&#x6301;&#x5C0F;&#x4E8E;12px&#x5B57;&#x4F53;</h3>
+<ol>
+<li>&#x65E7;&#x7248;&#x672C; &#x2013;webkit-text-size-adjust:none</li>
+<li>&#x65B0;&#x7248;&#x672C; &#x2013;webkit-transform:scale(0.8)</li>
+</ol>
+<h3 id="&#x8BBE;&#x7F6E;&#x5143;&#x7D20;&#x6D6E;&#x52A8;&#x540E;&#xFF0C;display&#x662F;&#x4EC0;&#x4E48;"><a name="&#x8BBE;&#x7F6E;&#x5143;&#x7D20;&#x6D6E;&#x52A8;&#x540E;&#xFF0C;display&#x662F;&#x4EC0;&#x4E48;" class="plugin-anchor" href="#&#x8BBE;&#x7F6E;&#x5143;&#x7D20;&#x6D6E;&#x52A8;&#x540E;&#xFF0C;display&#x662F;&#x4EC0;&#x4E48;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BBE;&#x7F6E;&#x5143;&#x7D20;&#x6D6E;&#x52A8;&#x540E;&#xFF0C;display&#x662F;&#x4EC0;&#x4E48;</h3>
+<p>&#x81EA;&#x52A8;&#x53D8;&#x4E3A;block</p>
+<h3 id="&#x4E3A;&#x4F7F;&#x9875;&#x9762;&#x91CC;&#x7684;&#x5B57;&#x4F53;&#x53D8;&#x5F97;&#x6E05;&#x6670;&#xFF0C;&#x53D8;&#x7EC6;&#x7528;css&#x5982;&#x4F55;&#x505A;&#xFF1F;"><a name="&#x4E3A;&#x4F7F;&#x9875;&#x9762;&#x91CC;&#x7684;&#x5B57;&#x4F53;&#x53D8;&#x5F97;&#x6E05;&#x6670;&#xFF0C;&#x53D8;&#x7EC6;&#x7528;css&#x5982;&#x4F55;&#x505A;&#xFF1F;" class="plugin-anchor" href="#&#x4E3A;&#x4F7F;&#x9875;&#x9762;&#x91CC;&#x7684;&#x5B57;&#x4F53;&#x53D8;&#x5F97;&#x6E05;&#x6670;&#xFF0C;&#x53D8;&#x7EC6;&#x7528;css&#x5982;&#x4F55;&#x505A;&#xFF1F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E3A;&#x4F7F;&#x9875;&#x9762;&#x91CC;&#x7684;&#x5B57;&#x4F53;&#x53D8;&#x5F97;&#x6E05;&#x6670;&#xFF0C;&#x53D8;&#x7EC6;&#x7528;css&#x5982;&#x4F55;&#x505A;&#xFF1F;</h3>
+<p>-webkit-font-smoothing: antialiased;</p>
+<h3 id="font-styleoblique&#x4EC0;&#x4E48;&#x610F;&#x601D;"><a name="font-styleoblique&#x4EC0;&#x4E48;&#x610F;&#x601D;" class="plugin-anchor" href="#font-styleoblique&#x4EC0;&#x4E48;&#x610F;&#x601D;"><i class="fa fa-link" aria-hidden="true"></i></a>font-style:oblique&#x4EC0;&#x4E48;&#x610F;&#x601D;</h3>
+<p>italic&#x662F;&#x6587;&#x5B57;&#x7684;&#x659C;&#x4F53;&#xFF0C;oblique&#x662F;&#x6587;&#x5B57;&#x7684;&#x503E;&#x659C;</p>
+<h3 id="displayinline-block&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x4F1A;&#x663E;&#x793A;&#x95F4;&#x9699;"><a name="displayinline-block&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x4F1A;&#x663E;&#x793A;&#x95F4;&#x9699;" class="plugin-anchor" href="#displayinline-block&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x4F1A;&#x663E;&#x793A;&#x95F4;&#x9699;"><i class="fa fa-link" aria-hidden="true"></i></a>display:inline-block&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x4F1A;&#x663E;&#x793A;&#x95F4;&#x9699;</h3>
+<p>&#x5185;&#x8054;&#x5143;&#x7D20;&#x6362;&#x884C;&#x4E66;&#x5199;&#xFF0C;&#x4E2D;&#x95F4;&#x7559;&#x6709;&#x6362;&#x884C;&#x7B26;&#xFF0C;&#x4E14;&#x5B57;&#x53F7;&#x4E0D;&#x4E3A;0&#xFF0C;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#x5982;&#x4E0B;</p>
+<ol>
+<li><p>2&#x4E2A;&#x5185;&#x8054;&#x5757;&#x4E2D;&#x95F4;&#x4E0D;&#x7559;&#x7A7A;&#x683C;&#x6216;&#x6362;&#x884C;&#x7B26;</p>
+<pre class="language-"><code class="lang-html"> &#xFF08;1&#xFF09;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>
+ &#xFF08;2&#xFF09;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span><span class="token comment" spellcheck="true">&lt;!--
+     --&gt;</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span>
+ <span class="token attr-name">&#xFF08;3&#xFF09;</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+</li>
+<li><p>&#x8D1F;margin
+margin-right:-4px;*margin-right:0;&#x4E0D;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#xFF0C;&#x548C;&#x5B57;&#x53F7;&#x6709;&#x5173;</p>
+</li>
+<li><p>&#x7236;&#x5143;&#x7D20;font-size:0; &#x5728;inline-block&#x5143;&#x7D20;&#x91CD;&#x65B0;&#x8BBE;&#x7F6E;&#x5B57;&#x4F53;</p>
+</li>
+</ol>
+<h3 id="absolute&#x7684;containing-block&#x8BA1;&#x7B97;&#x65B9;&#x5F0F;&#x548C;&#x6B63;&#x5E38;&#x6D41;&#x6709;&#x4EC0;&#x4E48;&#x533A;&#x522B;"><a name="absolute&#x7684;containing-block&#x8BA1;&#x7B97;&#x65B9;&#x5F0F;&#x548C;&#x6B63;&#x5E38;&#x6D41;&#x6709;&#x4EC0;&#x4E48;&#x533A;&#x522B;" class="plugin-anchor" href="#absolute&#x7684;containing-block&#x8BA1;&#x7B97;&#x65B9;&#x5F0F;&#x548C;&#x6B63;&#x5E38;&#x6D41;&#x6709;&#x4EC0;&#x4E48;&#x533A;&#x522B;"><i class="fa fa-link" aria-hidden="true"></i></a>absolute&#x7684;containing block&#x8BA1;&#x7B97;&#x65B9;&#x5F0F;&#x548C;&#x6B63;&#x5E38;&#x6D41;&#x6709;&#x4EC0;&#x4E48;&#x533A;&#x522B;</h3>
+<p>fixed&#x7531;viewport&#x5EFA;&#x7ACB;&#xFF0C;absolute&#x7531;&#x7956;&#x5148;&#x5143;&#x7D20;&#x4E2D;&#x6700;&#x8FD1;&#x7684;position&#x975E;static&#x7684;&#x5143;&#x7D20;&#xFF0C;relative&#x548C;static&#x662F;&#x7956;&#x5148;&#x5143;&#x7D20;&#x4E2D;&#x6700;&#x8FD1;&#x7684;block container box&#x7684;content&#x533A;&#x57DF;&#xFF0C;&#x4F8B;&#x5982;&#x4E24;&#x4E2A;&#x76F8;&#x5BF9;&#x5B9A;&#x4F4D;&#x7684;div&#x5C06;&#x4E0A;&#x4E0B;&#x6392;&#x5217;&#x800C;&#x4E0D;&#x4F1A;&#x91CD;&#x53E0;</p>
+<h3 id="&#x5C45;&#x4E2D;div&#xFF0C;&#x5C45;&#x4E2D;&#x6D6E;&#x52A8;&#x5143;&#x7D20;&#xFF0C;&#x5C45;&#x4E2D;&#x7EDD;&#x5BF9;&#x5B9A;&#x4F4D;&#x5143;&#x7D20;"><a name="&#x5C45;&#x4E2D;div&#xFF0C;&#x5C45;&#x4E2D;&#x6D6E;&#x52A8;&#x5143;&#x7D20;&#xFF0C;&#x5C45;&#x4E2D;&#x7EDD;&#x5BF9;&#x5B9A;&#x4F4D;&#x5143;&#x7D20;" class="plugin-anchor" href="#&#x5C45;&#x4E2D;div&#xFF0C;&#x5C45;&#x4E2D;&#x6D6E;&#x52A8;&#x5143;&#x7D20;&#xFF0C;&#x5C45;&#x4E2D;&#x7EDD;&#x5BF9;&#x5B9A;&#x4F4D;&#x5143;&#x7D20;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5C45;&#x4E2D;div&#xFF0C;&#x5C45;&#x4E2D;&#x6D6E;&#x52A8;&#x5143;&#x7D20;&#xFF0C;&#x5C45;&#x4E2D;&#x7EDD;&#x5BF9;&#x5B9A;&#x4F4D;&#x5143;&#x7D20;</h3>
+<ol>
+<li><p>&#x666E;&#x901A;div </p>
+<pre class="language-"><code class="lang-css"> <span class="token property">margin</span><span class="token punctuation">:</span> 0 auto<span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p>&#x6D6E;&#x52A8;div </p>
+<pre class="language-"><code class="lang-css"> <span class="token property">position</span><span class="token punctuation">:</span>relative<span class="token punctuation">;</span> <span class="token property">top</span><span class="token punctuation">:</span>50%<span class="token punctuation">;</span> <span class="token property">left</span><span class="token punctuation">:</span>50%<span class="token punctuation">;</span> <span class="token property">width</span><span class="token punctuation">:</span>500px<span class="token punctuation">;</span> <span class="token property">height</span><span class="token punctuation">:</span>300px<span class="token punctuation">;</span> <span class="token property">margin</span><span class="token punctuation">:</span>-150px 0 0 -250px<span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p>&#x7EDD;&#x5BF9;div&#xFF1A;</p>
+<pre class="language-"><code class="lang-css"> <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span> <span class="token property">width</span><span class="token punctuation">:</span> 1200px<span class="token punctuation">;</span> <span class="token property">background</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span> <span class="token property">margin</span><span class="token punctuation">:</span> 0 auto<span class="token punctuation">;</span> <span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span> <span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span> <span class="token property">bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span> <span class="token property">right</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+</code></pre>
+</li>
+</ol>
+<h3 id="overflowscroll&#x65F6;&#x4E0D;&#x80FD;&#x5E73;&#x6ED1;&#x6EDA;&#x52A8;&#x7684;&#x95EE;&#x9898;&#x600E;&#x4E48;&#x5904;&#x7406;"><a name="overflowscroll&#x65F6;&#x4E0D;&#x80FD;&#x5E73;&#x6ED1;&#x6EDA;&#x52A8;&#x7684;&#x95EE;&#x9898;&#x600E;&#x4E48;&#x5904;&#x7406;" class="plugin-anchor" href="#overflowscroll&#x65F6;&#x4E0D;&#x80FD;&#x5E73;&#x6ED1;&#x6EDA;&#x52A8;&#x7684;&#x95EE;&#x9898;&#x600E;&#x4E48;&#x5904;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>overflow:scroll&#x65F6;&#x4E0D;&#x80FD;&#x5E73;&#x6ED1;&#x6EDA;&#x52A8;&#x7684;&#x95EE;&#x9898;&#x600E;&#x4E48;&#x5904;&#x7406;</h3>
+<p>overflow: auto; overflow-x: hidden&#xFF0C;&#x5DE6;&#x53F3;&#x5373;&#x4F7F;&#x6709;&#x6587;&#x5B57;&#x8D85;&#x51FA;&#x4E5F;&#x4E0D;&#x4F1A;&#x5DE6;&#x53F3;&#x6ED1;&#x52A8;</p>
+<h3 id="&#x6709;&#x4E00;&#x4E2A;&#x9AD8;&#x5EA6;&#x81EA;&#x9002;&#x5E94;&#x7684;div&#xFF0C;&#x91CC;&#x9762;&#x6709;2&#x4E2A;div&#xFF0C;&#x4E00;&#x4E2A;&#x9AD8;&#x5EA6;100px&#xFF0C;&#x53E6;&#x4E00;&#x4E2A;&#x586B;&#x6EE1;&#x5269;&#x4E0B;&#x9AD8;&#x5EA6;&#x3002;"><a name="&#x6709;&#x4E00;&#x4E2A;&#x9AD8;&#x5EA6;&#x81EA;&#x9002;&#x5E94;&#x7684;div&#xFF0C;&#x91CC;&#x9762;&#x6709;2&#x4E2A;div&#xFF0C;&#x4E00;&#x4E2A;&#x9AD8;&#x5EA6;100px&#xFF0C;&#x53E6;&#x4E00;&#x4E2A;&#x586B;&#x6EE1;&#x5269;&#x4E0B;&#x9AD8;&#x5EA6;&#x3002;" class="plugin-anchor" href="#&#x6709;&#x4E00;&#x4E2A;&#x9AD8;&#x5EA6;&#x81EA;&#x9002;&#x5E94;&#x7684;div&#xFF0C;&#x91CC;&#x9762;&#x6709;2&#x4E2A;div&#xFF0C;&#x4E00;&#x4E2A;&#x9AD8;&#x5EA6;100px&#xFF0C;&#x53E6;&#x4E00;&#x4E2A;&#x586B;&#x6EE1;&#x5269;&#x4E0B;&#x9AD8;&#x5EA6;&#x3002;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6709;&#x4E00;&#x4E2A;&#x9AD8;&#x5EA6;&#x81EA;&#x9002;&#x5E94;&#x7684;div&#xFF0C;&#x91CC;&#x9762;&#x6709;2&#x4E2A;div&#xFF0C;&#x4E00;&#x4E2A;&#x9AD8;&#x5EA6;100px&#xFF0C;&#x53E6;&#x4E00;&#x4E2A;&#x586B;&#x6EE1;&#x5269;&#x4E0B;&#x9AD8;&#x5EA6;&#x3002;</h3>
+<p>div0 position:relative&#xFF0C;div1&#x56FA;&#x5B9A;&#x9AD8;&#x5EA6;&#xFF0C;&#x7EDD;&#x5BF9;&#x5B9A;&#x4F4D;&#xFF0C;&#x8131;&#x79BB;&#x6587;&#x6863;&#x6D41;&#xFF0C;div2&#x9AD8;&#x5EA6;100%</p>
+<h3 id="&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x521D;&#x59CB;&#x5316;css&#x6837;&#x5F0F;"><a name="&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x521D;&#x59CB;&#x5316;css&#x6837;&#x5F0F;" class="plugin-anchor" href="#&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x521D;&#x59CB;&#x5316;css&#x6837;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x521D;&#x59CB;&#x5316;CSS&#x6837;&#x5F0F;</h3>
+<p>&#x56E0;&#x4E3A;&#x4E0D;&#x540C;&#x7684;&#x4EE3;&#x7406;&#xFF08;&#x6D4F;&#x89C8;&#x5668;&#xFF09;&#x5BF9;HTML&#x6807;&#x7B7E;&#x6709;&#x9ED8;&#x8BA4;&#x7684;&#x6837;&#x5F0F;&#xFF0C;&#x800C;&#x4E0D;&#x540C;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x9ED8;&#x8BA4;&#x6837;&#x5F0F;&#x6709;&#x5DEE;&#x522B;&#xFF0C;&#x4E3A;&#x4E86;&#x8BA9;&#x9875;&#x9762;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x4E0A;&#x6709;&#x76F8;&#x540C;&#x7684;&#x663E;&#x793A;&#x6548;&#x679C;&#xFF0C;&#x9700;&#x8981;&#x521D;&#x59CB;&#x5316;CSS&#x6837;&#x5F0F;
+&#x6700;&#x5E38;&#x89C1;&#x7684;&#x521D;&#x59CB;&#x5316;&#x6837;&#x5F0F; * {margin:0; padding: 0}&#xFF0C;&#x6839;&#x636E;&#x9700;&#x8981;&#xFF0C;&#x53EF;&#x4EE5;&#x5BF9;CSS&#x6837;&#x5F0F;&#x8FDB;&#x884C;&#x4E0D;&#x540C;&#x7A0B;&#x5EA6;&#x7684;&#x521D;&#x59CB;&#x5316;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="1.Pseudo-classes.html" class="navigation navigation-prev " aria-label="Previous page: 伪类">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="3.Resources-load.html" class="navigation navigation-next " aria-label="Next page: 资源加载">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"盒子模型","level":"1.3.2","depth":2,"next":{"title":"资源加载","level":"1.3.3","depth":2,"path":"css/3.Resources-load.md","ref":"css/3.Resources-load.md","articles":[]},"previous":{"title":"伪类","level":"1.3.1","depth":2,"path":"css/1.Pseudo-classes.md","ref":"css/1.Pseudo-classes.md","articles":[]},"dir":"ltr"},"config":{"plugins":["splitter","anchors","anchor-navigation","prism","-highlight","github-buttons","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"livereload":{},"splitter":{},"search":{},"anchor-navigation":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"github-buttons":{"buttons":[{"user":"gzdaijie","repo":"web-front-end","type":"star","size":"large"},{"user":"gzdaijie","type":"follow","width":"230","count":false}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端面试大全","gitbook":"*","description":"前端面试大全，涵盖三剑客以及浏览器、性能等方面"},"file":{"path":"css/2.BoxModel.md","mtime":"2018-05-03T16:38:17.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-03T17:35:08.598Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
