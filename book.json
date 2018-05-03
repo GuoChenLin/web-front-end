@@ -1,0 +1,27 @@
+{
+    "title": "前端面试大全",
+    "description": "前端面试大全，涵盖三剑客以及浏览器、性能等方面",
+    "plugins": [
+      "splitter",
+      "anchors",
+      "anchor-navigation",
+      "prism",
+      "-highlight",
+      "github-buttons"
+    ],
+    "pluginsConfig": {
+      "github-buttons": {
+        "buttons": [{
+            "user": "gzdaijie",
+            "repo": "web-front-end",
+            "type": "star",
+            "size": "large"
+          }, {
+            "user": "gzdaijie",
+            "type": "follow",
+            "width": "230",
+            "count": false
+        }]
+      }
+    }
+  }
