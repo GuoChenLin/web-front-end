@@ -1,27 +1,46 @@
 {
-    "title": "前端面试大全",
-    "description": "前端面试大全，涵盖三剑客以及浏览器、性能等方面",
-    "plugins": [
-      "splitter",
-      "anchors",
-      "anchor-navigation",
-      "prism",
-      "-highlight",
-      "github-buttons"
-    ],
-    "pluginsConfig": {
-      "github-buttons": {
-        "buttons": [{
-            "user": "gzdaijie",
-            "repo": "web-front-end",
-            "type": "star",
-            "size": "large"
-          }, {
-            "user": "gzdaijie",
-            "type": "follow",
-            "width": "230",
-            "count": false
-        }]
-      }
+  "title": "前端面试大全",
+  "description": "前端面试大全，涵盖三剑客以及浏览器、性能等方面",
+  "language": "zh-hans",
+  "links": {
+    "sidebar": {
+      "geektutu的主页": "https://geektutu.com/series",
+      "前端面试大全": "https://github.com/gzdaijie/web-front-end"
+    }
+  },
+  "plugins": [
+    "-highlight",
+    "expandable-chapters",
+    "splitter",
+    "page-footer-ex",
+    "prism",
+    "github",
+    "github-buttons",
+    "sitemap-general"
+  ],
+  "pluginsConfig": {
+    "sitemap-general": {
+      "prefix": "https://gzdaijie.github.io/web-front-end/"
+    },
+    "expandable-chapters": {},
+    "page-footer-ex": {
+      "copyright": "[gzdaijie](https://github.com/gzdaijie)",
+      "markdown": true,
+      "update_label": "<strong>updated</strong>",
+      "update_format": "YYYY-MM-DD HH:mm:ss"
+    },
+    "github": {
+      "url": "https://github.com/gzdaijie/web-front-end"
+    },
+    "github-buttons": {
+      "buttons": [
+        {
+          "user": "gzdaijie",
+          "repo": "web-front-end",
+          "type": "star",
+          "size": "large"
+        }
+      ]
     }
   }
+}
