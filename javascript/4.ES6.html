@@ -1,6 +1,6 @@
 
 <!DOCTYPE HTML>
-<html lang="" >
+<html lang="zh-hans" >
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -17,15 +17,15 @@
     
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation/plugin.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
                 
             
                 
@@ -84,7 +84,7 @@
     }
     </style>
     <script>
-        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"gzdaijie","repo":"web-front-end","type":"star","size":"large"},{"user":"gzdaijie","type":"follow","width":"230","count":false}]};
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"gzdaijie","repo":"web-front-end","type":"star","size":"large"}]};
     </script>
 
     </head>
@@ -95,7 +95,7 @@
         
             
 <div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search" />
+    <input type="text" placeholder="输入并搜索" />
 </div>
 
             
@@ -106,7 +106,21 @@
 <ul class="summary">
     
     
+    
+        
+        <li>
+            <a href="https://geektutu.com/series" target="_blank" class="custom-link">geektutu的主页</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://github.com/gzdaijie/web-front-end" target="_blank" class="custom-link">前端面试大全</a>
+        </li>
+    
+    
 
+    
+    <li class="divider"></li>
     
 
     
@@ -417,7 +431,7 @@
 
     <li>
         <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+            本书使用 GitBook 发布
         </a>
     </li>
 </ul>
@@ -455,15 +469,15 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x524D;&#x7AEF;&#x9762;&#x8BD5;&#x9898;-javascript&#x4E4B;es6&#x76F8;&#x5173;"><a name="&#x524D;&#x7AEF;&#x9762;&#x8BD5;&#x9898;-javascript&#x4E4B;es6&#x76F8;&#x5173;" class="plugin-anchor" href="#&#x524D;&#x7AEF;&#x9762;&#x8BD5;&#x9898;-javascript&#x4E4B;es6&#x76F8;&#x5173;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x524D;&#x7AEF;&#x9762;&#x8BD5;&#x9898; Javascript&#x4E4B;ES6&#x76F8;&#x5173;</h1>
-<h3 id="cmd&#x548C;amd&#x6807;&#x51C6;"><a name="cmd&#x548C;amd&#x6807;&#x51C6;" class="plugin-anchor" href="#cmd&#x548C;amd&#x6807;&#x51C6;"><i class="fa fa-link" aria-hidden="true"></i></a>CMD&#x548C;AMD&#x6807;&#x51C6;</h3>
-<h3 id="objectis-&#x4E0E;&#x539F;&#x6765;&#x7684;&#x6BD4;&#x8F83;&#x64CD;&#x4F5C;&#x7B26;-&#x3001;-&#x7684;&#x533A;&#x522B;&#xFF1F;"><a name="objectis-&#x4E0E;&#x539F;&#x6765;&#x7684;&#x6BD4;&#x8F83;&#x64CD;&#x4F5C;&#x7B26;-&#x3001;-&#x7684;&#x533A;&#x522B;&#xFF1F;" class="plugin-anchor" href="#objectis-&#x4E0E;&#x539F;&#x6765;&#x7684;&#x6BD4;&#x8F83;&#x64CD;&#x4F5C;&#x7B26;-&#x3001;-&#x7684;&#x533A;&#x522B;&#xFF1F;"><i class="fa fa-link" aria-hidden="true"></i></a>Object.is() &#x4E0E;&#x539F;&#x6765;&#x7684;&#x6BD4;&#x8F83;&#x64CD;&#x4F5C;&#x7B26;&#x201C; ===&#x201D;&#x3001;&#x201C; ==&#x201D;&#x7684;&#x533A;&#x522B;&#xFF1F;</h3>
+                                <h1 id="&#x524D;&#x7AEF;&#x9762;&#x8BD5;&#x9898;-javascript&#x4E4B;es6&#x76F8;&#x5173;">&#x524D;&#x7AEF;&#x9762;&#x8BD5;&#x9898; Javascript&#x4E4B;ES6&#x76F8;&#x5173;</h1>
+<h3 id="cmd&#x548C;amd&#x6807;&#x51C6;">CMD&#x548C;AMD&#x6807;&#x51C6;</h3>
+<h3 id="objectis-&#x4E0E;&#x539F;&#x6765;&#x7684;&#x6BD4;&#x8F83;&#x64CD;&#x4F5C;&#x7B26;-&#x3001;-&#x7684;&#x533A;&#x522B;&#xFF1F;">Object.is() &#x4E0E;&#x539F;&#x6765;&#x7684;&#x6BD4;&#x8F83;&#x64CD;&#x4F5C;&#x7B26;&#x201C; ===&#x201D;&#x3001;&#x201C; ==&#x201D;&#x7684;&#x533A;&#x522B;&#xFF1F;</h3>
 <ol>
 <li>&#x4E24;&#x7B49;&#x53F7;&#x5224;&#x7B49;&#xFF0C;&#x4F1A;&#x5728;&#x6BD4;&#x8F83;&#x65F6;&#x8FDB;&#x884C;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#xFF1B;&#x4E09;&#x7B49;&#x53F7;&#x5224;&#x7B49;&#xFF0C;&#x6BD4;&#x8F83;&#x65F6;&#x4E0D;&#x8FDB;&#x884C;&#x9690;&#x5F0F;&#x7C7B;&#x578B;&#x8F6C;&#x6362;,&#x7C7B;&#x578B;&#x4E0D;&#x540C;&#x5219;false&#xFF1B; </li>
 <li>Object.is &#x5728;&#x4E09;&#x7B49;&#x53F7;&#x5224;&#x7B49;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x7279;&#x522B;&#x5904;&#x7406;&#x4E86; NaN &#x3001;-0 &#x548C; +0 &#xFF0C;&#x4FDD;&#x8BC1; -0 &#x548C; +0 &#x4E0D;&#x518D;&#x76F8;&#x540C;&#xFF0C;&#x4F46; Object.is(NaN, NaN) === true.</li>
 <li>Object.is &#x5E94;&#x88AB;&#x8BA4;&#x4E3A;&#x6709;&#x5176;&#x7279;&#x6B8A;&#x7684;&#x7528;&#x9014;&#xFF0C;&#x800C;&#x4E0D;&#x80FD;&#x7528;&#x5B83;&#x8BA4;&#x4E3A;&#x5B83;&#x6BD4;&#x5176;&#x5B83;&#x7684;&#x76F8;&#x7B49;&#x5BF9;&#x6BD4;&#x66F4;&#x5BBD;&#x677E;&#x6216;&#x4E25;&#x683C;</li>
 </ol>
-
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> <a href="https://github.com/gzdaijie" target="_blank">gzdaijie</a> </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <strong>updated</strong> 2018-05-04 01:47:18 </span> </footer>
                                 
                                 </section>
                             
@@ -506,7 +520,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"ECMAScript6","level":"1.4.4","depth":2,"next":{"title":"Animation动画相关","level":"1.4.5","depth":2,"path":"javascript/5.Animation.md","ref":"javascript/5.Animation.md","articles":[]},"previous":{"title":"Node.js","level":"1.4.3","depth":2,"path":"javascript/3.Nodejs.md","ref":"javascript/3.Nodejs.md","articles":[]},"dir":"ltr"},"config":{"plugins":["splitter","anchors","anchor-navigation","prism","-highlight","github-buttons"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"splitter":{},"search":{},"anchor-navigation":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"github-buttons":{"buttons":[{"user":"gzdaijie","repo":"web-front-end","type":"star","size":"large"},{"user":"gzdaijie","type":"follow","width":"230","count":false}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端面试大全","gitbook":"*","description":"前端面试大全，涵盖三剑客以及浏览器、性能等方面"},"file":{"path":"javascript/4.ES6.md","mtime":"2018-05-03T17:47:18.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-03T17:58:08.379Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"ECMAScript6","level":"1.4.4","depth":2,"next":{"title":"Animation动画相关","level":"1.4.5","depth":2,"path":"javascript/5.Animation.md","ref":"javascript/5.Animation.md","articles":[]},"previous":{"title":"Node.js","level":"1.4.3","depth":2,"path":"javascript/3.Nodejs.md","ref":"javascript/3.Nodejs.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","expandable-chapters","splitter","page-footer-ex","prism","github","github-buttons","sitemap-general"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/gzdaijie/web-front-end"},"page-footer-ex":{"copyright":"[gzdaijie](https://github.com/gzdaijie)","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<strong>updated</strong>"},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sitemap-general":{"prefix":"https://gzdaijie.github.io/web-front-end/"},"fontsettings":{"theme":"white","family":"sans","size":2},"github-buttons":{"buttons":[{"user":"gzdaijie","repo":"web-front-end","type":"star","size":"large"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端面试大全","language":"zh-hans","links":{"sidebar":{"geektutu的主页":"https://geektutu.com/series","前端面试大全":"https://github.com/gzdaijie/web-front-end"}},"gitbook":"*","description":"前端面试大全，涵盖三剑客以及浏览器、性能等方面"},"file":{"path":"javascript/4.ES6.md","mtime":"2018-05-03T17:47:18.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-04T17:24:38.005Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -516,7 +530,15 @@
     <script src="../gitbook/theme.js"></script>
     
         
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
         <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
         
     
         
